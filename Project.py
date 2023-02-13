@@ -1,4 +1,4 @@
 import os
 os.system("cls")
 
-print("Hola")
+print(" que onda ")
