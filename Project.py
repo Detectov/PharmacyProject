@@ -1,4 +1,4 @@
 import os
 os.system("cls")
 
-print(" que onda ")
+print("super blowjob")
