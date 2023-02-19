@@ -42,26 +42,21 @@ class Ui_Dialog(object):
 "color: rgb(255, 255, 255);")
         self.password.setText("")
         self.password.setObjectName("password")
-        self.signupbutton = QtWidgets.QPushButton(Dialog)
-        self.signupbutton.setGeometry(QtCore.QRect(290, 410, 101, 31))
-        self.signupbutton.setStyleSheet("background-color: rgb(167, 168, 167);\n"
+        self.loginbutton = QtWidgets.QPushButton(Dialog)
+        self.loginbutton.setGeometry(QtCore.QRect(380, 370, 101, 31))
+        self.loginbutton.setStyleSheet("background-color: rgb(167, 168, 167);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 14pt \"MS Shell Dlg 2\";")
-        self.signupbutton.setObjectName("signupbutton")
+        self.loginbutton.setObjectName("loginbutton")
         self.label_4 = QtWidgets.QLabel(Dialog)
         self.label_4.setGeometry(QtCore.QRect(230, 120, 151, 16))
         self.label_4.setObjectName("label_4")
-        self.confirmpass = QtWidgets.QLineEdit(Dialog)
-        self.confirmpass.setGeometry(QtCore.QRect(200, 320, 281, 31))
-        self.confirmpass.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
-"color: rgb(255, 255, 255);")
-        self.confirmpass.setText("")
-        self.confirmpass.setObjectName("confirmpass")
-        self.label_5 = QtWidgets.QLabel(Dialog)
-        self.label_5.setGeometry(QtCore.QRect(20, 330, 171, 21))
-        self.label_5.setStyleSheet("font-size:15pt;\n"
-"color: rgb(255, 0, 127)")
-        self.label_5.setObjectName("label_5")
+        self.createaccbutton = QtWidgets.QPushButton(Dialog)
+        self.createaccbutton.setGeometry(QtCore.QRect(380, 320, 101, 31))
+        self.createaccbutton.setStyleSheet("background-color: rgb(167, 168, 167);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 14pt \"MS Shell Dlg 2\";")
+        self.createaccbutton.setObjectName("createaccbutton")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -69,9 +64,9 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "SIGN UP"))
+        self.label.setText(_translate("Dialog", "LOG IN "))
         self.label_2.setText(_translate("Dialog", "Email : "))
         self.label_3.setText(_translate("Dialog", "Password : "))
-        self.signupbutton.setText(_translate("Dialog", "SIGN UP"))
+        self.loginbutton.setText(_translate("Dialog", "LOGIN"))
         self.label_4.setText(_translate("Dialog", "PROYECT BY JARED AND MOU "))
-        self.label_5.setText(_translate("Dialog", "Confirm password : "))
+        self.createaccbutton.setText(_translate("Dialog", "CREATE"))

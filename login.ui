@@ -29,7 +29,7 @@
     <string notr="true">color: rgb(231, 231, 231);font-size:28pt;</string>
    </property>
    <property name="text">
-    <string>SIGN UP</string>
+    <string>LOG IN </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -100,11 +100,11 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="signupbutton">
+  <widget class="QPushButton" name="loginbutton">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>410</y>
+     <x>380</x>
+     <y>370</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -115,7 +115,7 @@ color: rgb(255, 255, 255);
 font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="text">
-    <string>SIGN UP</string>
+    <string>LOGIN</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -131,38 +131,22 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>PROYECT BY JARED AND MOU </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="confirmpass">
+  <widget class="QPushButton" name="createaccbutton">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>380</x>
      <y>320</y>
-     <width>281</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(167, 168, 167);
+color: rgb(255, 255, 255);
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>330</y>
-     <width>171</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font-size:15pt;
-color: rgb(255, 0, 127)</string>
-   </property>
-   <property name="text">
-    <string>Confirm password : </string>
+    <string>CREATE</string>
    </property>
   </widget>
  </widget>
