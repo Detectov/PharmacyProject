@@ -34,6 +34,10 @@ class CreateAcc(QDialog):
         if self.password.text()==self.confirmpass.text():
             password=self.password.text()
             print("Succesfully created acc with email: " , email, "and password: ", password)
+            login=Login()
+            widget.addWidget(login)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+
         
 app=QApplication(sys.argv)
 mainwindow=Login()
