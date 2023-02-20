@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Documents\PROYECT\PharmacyProject\login.ui'
+# Form implementation generated from reading ui file 'c:\Users\User\Documents\PROYECT\PharmacyProject\login\login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -17,7 +17,7 @@ class Ui_Dialog(object):
         Dialog.resize(562, 611)
         Dialog.setStyleSheet("background-color: rgb(54, 54, 54);")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(230, 50, 141, 61))
+        self.label.setGeometry(QtCore.QRect(230, 50, 151, 61))
         self.label.setStyleSheet("color: rgb(231, 231, 231);font-size:28pt;")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Dialog)
@@ -26,7 +26,7 @@ class Ui_Dialog(object):
 "color:rgb(255, 0, 127)")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(90, 290, 121, 21))
+        self.label_3.setGeometry(QtCore.QRect(70, 290, 121, 21))
         self.label_3.setStyleSheet("font-size:15pt;\n"
 "color: rgb(255, 0, 127)")
         self.label_3.setObjectName("label_3")
@@ -49,7 +49,7 @@ class Ui_Dialog(object):
 "font: 14pt \"MS Shell Dlg 2\";")
         self.loginbutton.setObjectName("loginbutton")
         self.label_4 = QtWidgets.QLabel(Dialog)
-        self.label_4.setGeometry(QtCore.QRect(230, 120, 151, 16))
+        self.label_4.setGeometry(QtCore.QRect(230, 120, 181, 16))
         self.label_4.setObjectName("label_4")
         self.createaccbutton = QtWidgets.QPushButton(Dialog)
         self.createaccbutton.setGeometry(QtCore.QRect(380, 320, 101, 31))

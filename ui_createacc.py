@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Documents\PROYECT\PharmacyProject\createacc.ui'
+# Form implementation generated from reading ui file 'c:\Users\User\Documents\PROYECT\PharmacyProject\login\createacc.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,53 +14,55 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(562, 611)
-        Dialog.setStyleSheet("background-color: rgb(54, 54, 54);")
+        Dialog.resize(562, 613)
+        Dialog.setStyleSheet("background-color: rgb(23, 136, 211)")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(230, 50, 141, 61))
+        self.label.setGeometry(QtCore.QRect(230, 50, 181, 61))
         self.label.setStyleSheet("color: rgb(231, 231, 231);font-size:28pt;")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(120, 210, 81, 21))
+        self.label_2.setGeometry(QtCore.QRect(150, 230, 61, 21))
         self.label_2.setStyleSheet("font-size:15pt;\n"
-"color:rgb(255, 0, 127)")
+"color:rgb(255, 255, 255)")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(90, 290, 121, 21))
+        self.label_3.setGeometry(QtCore.QRect(120, 280, 101, 21))
         self.label_3.setStyleSheet("font-size:15pt;\n"
-"color: rgb(255, 0, 127)")
+"color: rgb(255, 255, 255)")
         self.label_3.setObjectName("label_3")
         self.email = QtWidgets.QLineEdit(Dialog)
-        self.email.setGeometry(QtCore.QRect(200, 200, 281, 31))
+        self.email.setGeometry(QtCore.QRect(240, 230, 281, 31))
         self.email.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
 "color: rgb(255, 255, 255);")
         self.email.setText("")
         self.email.setObjectName("email")
         self.password = QtWidgets.QLineEdit(Dialog)
-        self.password.setGeometry(QtCore.QRect(200, 280, 281, 31))
+        self.password.setGeometry(QtCore.QRect(240, 280, 281, 31))
         self.password.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
 "color: rgb(255, 255, 255);")
         self.password.setText("")
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password.setObjectName("password")
         self.signupbutton = QtWidgets.QPushButton(Dialog)
-        self.signupbutton.setGeometry(QtCore.QRect(290, 410, 101, 31))
+        self.signupbutton.setGeometry(QtCore.QRect(420, 370, 101, 31))
         self.signupbutton.setStyleSheet("background-color: rgb(167, 168, 167);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 14pt \"MS Shell Dlg 2\";")
         self.signupbutton.setObjectName("signupbutton")
         self.label_4 = QtWidgets.QLabel(Dialog)
-        self.label_4.setGeometry(QtCore.QRect(230, 120, 151, 16))
+        self.label_4.setGeometry(QtCore.QRect(230, 120, 191, 16))
         self.label_4.setObjectName("label_4")
         self.confirmpass = QtWidgets.QLineEdit(Dialog)
-        self.confirmpass.setGeometry(QtCore.QRect(200, 320, 281, 31))
+        self.confirmpass.setGeometry(QtCore.QRect(240, 320, 281, 31))
         self.confirmpass.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
 "color: rgb(255, 255, 255);")
         self.confirmpass.setText("")
+        self.confirmpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.confirmpass.setObjectName("confirmpass")
         self.label_5 = QtWidgets.QLabel(Dialog)
-        self.label_5.setGeometry(QtCore.QRect(20, 330, 171, 21))
+        self.label_5.setGeometry(QtCore.QRect(50, 320, 171, 31))
         self.label_5.setStyleSheet("font-size:15pt;\n"
-"color: rgb(255, 0, 127)")
+"color: rgb(255, 255, 255)")
         self.label_5.setObjectName("label_5")
 
         self.retranslateUi(Dialog)

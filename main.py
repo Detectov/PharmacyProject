@@ -28,11 +28,12 @@ class CreateAcc(QDialog):
         loadUi("createacc.ui",self)
         self.signupbutton.clicked.connect(self.createaccfunction)
         
-    def createaccfuntion(self):
+        
+    def createaccfunction(self):
         email = self.email.text()
-        if self.paswword.text()==self.confirmpasss.text():
-            password=self.password.text(
-                print("Succesfully created acc with email " , email, "and password : ", password))
+        if self.password.text()==self.confirmpass.text():
+            password=self.password.text()
+            print("Succesfully created acc with email: " , email, "and password: ", password)
         
 app=QApplication(sys.argv)
 mainwindow=Login()
