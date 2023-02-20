@@ -21,7 +21,7 @@
     <rect>
      <x>230</x>
      <y>50</y>
-     <width>141</width>
+     <width>181</width>
      <height>61</height>
     </rect>
    </property>
@@ -35,8 +35,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>210</y>
+     <x>140</x>
+     <y>230</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -52,8 +52,8 @@ color:rgb(255, 0, 127)</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>290</y>
+     <x>100</x>
+     <y>280</y>
      <width>121</width>
      <height>21</height>
     </rect>
@@ -69,8 +69,8 @@ color: rgb(255, 0, 127)</string>
   <widget class="QLineEdit" name="email">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>200</y>
+     <x>240</x>
+     <y>230</y>
      <width>281</width>
      <height>31</height>
     </rect>
@@ -86,7 +86,7 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>240</x>
      <y>280</y>
      <width>281</width>
      <height>31</height>
@@ -99,12 +99,15 @@ color: rgb(255, 255, 255);</string>
    <property name="text">
     <string/>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
   </widget>
   <widget class="QPushButton" name="signupbutton">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>410</y>
+     <x>350</x>
+     <y>390</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -123,7 +126,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     <rect>
      <x>230</x>
      <y>120</y>
-     <width>151</width>
+     <width>191</width>
      <height>16</height>
     </rect>
    </property>
@@ -134,7 +137,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QLineEdit" name="confirmpass">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>240</x>
      <y>320</y>
      <width>281</width>
      <height>31</height>
@@ -147,13 +150,16 @@ color: rgb(255, 255, 255);</string>
    <property name="text">
     <string/>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>330</y>
-     <width>171</width>
+     <width>221</width>
      <height>21</height>
     </rect>
    </property>
