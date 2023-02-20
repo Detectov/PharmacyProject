@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(54, 54, 54);</string>
+   <string notr="true">background-color: rgb(54, 54, 54);
+background-color: rgb(23, 136, 211);</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -36,14 +37,15 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>210</y>
+     <y>200</y>
      <width>81</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font-size:15pt;
-color:rgb(255, 0, 127)</string>
+color: rgb(255, 255, 255);
+</string>
    </property>
    <property name="text">
     <string>Email : </string>
@@ -53,14 +55,15 @@ color:rgb(255, 0, 127)</string>
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>290</y>
+     <y>280</y>
      <width>121</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font-size:15pt;
-color: rgb(255, 0, 127)</string>
+color: rgb(255, 255, 255);
+</string>
    </property>
    <property name="text">
     <string>Password : </string>
