@@ -49,7 +49,7 @@ color: rgb(255, 255, 255);</string>
     <string>VIEW PRODUCTS </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="salesbutton">
    <property name="geometry">
     <rect>
      <x>220</x>

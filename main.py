@@ -91,7 +91,9 @@ class Reports(QDialog):
         widget.setFixedWidth(620)
         widget.setFixedHeight(480)
         self.prodbutton.clicked.connect(self.gotoprodtab)
+        self.salesbutton.clicked.connect(self.gotosalestab)
         self.backbutton.clicked.connect(self.backtomenu)
+        
     def backtomenu(self):
         menu=Menu()
         widget.addWidget(menu)
@@ -100,6 +102,11 @@ class Reports(QDialog):
     def gotoprodtab(self):
         prodtable = ProdTable()
         widget.addWidget(prodtable)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def gotosalestab(self):
+        salestable = SalesTable()
+        widget.addWidget(salestable)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
 class ProdTable(QDialog):
@@ -118,6 +125,22 @@ class ProdTable(QDialog):
         widget.addWidget(reports)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+
+class SalesTable(QDialog):
+    def __init__(self):
+        super(SalesTable, self).__init__()
+        loadUi("saletable.ui", self)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.backbutton.clicked.connect(self.backtoreports)
+        
+    def loaddata(self):
+        pass
+    
+    def backtoreports(self):
+        reports=Reports()
+        widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
         
 app=QApplication(sys.argv)
 mainwindow=Login()
