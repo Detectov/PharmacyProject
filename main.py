@@ -15,6 +15,9 @@ class Login(QDialog):
         email=self.email.text()
         password=self.password.text()
         print("Succesfully logged in with email: ",email, "and password",password)
+        if email == "pedro" and password == "pass":
+            self
+            
         
     def gotocreated(self):
         createacc=CreateAcc()
@@ -37,6 +40,14 @@ class CreateAcc(QDialog):
             login=Login()
             widget.addWidget(login)
             widget.setCurrentIndex(widget.currentIndex()+1)
+
+class ProdWindow(QDialog):
+    def __init__(self):
+        super(ProdWindow, self).__init__()
+        loadUi("prodtable.ui", self)
+
+    def loaddata(self):
+        med=[]
 
         
 app=QApplication(sys.argv)
