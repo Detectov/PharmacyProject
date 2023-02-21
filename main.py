@@ -1,5 +1,5 @@
 import sys 
-from  PyQt5 import QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 
@@ -8,15 +8,23 @@ class Login(QDialog):
         super(Login,self).__init__()
         loadUi("login.ui",self)
         self.loginbutton.clicked.connect(self.loginfunction)
+        self.loginbutton.clicked.connect(self.gotomenu)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createaccbutton.clicked.connect(self.gotocreated)
         
     def loginfunction(self):
         email=self.email.text()
         password=self.password.text()
+        
+        
         print("Succesfully logged in with email: ",email, "and password",password)
-        if email == "pedro" and password == "pass":
-            self
+        
+    def gotomenu(self):
+        menu=Menu()
+        widget.addWidget(menu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+            
+            
             
         
     def gotocreated(self):
@@ -30,7 +38,9 @@ class CreateAcc(QDialog):
         super(CreateAcc,self).__init__()
         loadUi("createacc.ui",self)
         self.signupbutton.clicked.connect(self.createaccfunction)
-        
+        mail = []
+        passes = []
+
         
     def createaccfunction(self):
         email = self.email.text()
@@ -40,14 +50,73 @@ class CreateAcc(QDialog):
             login=Login()
             widget.addWidget(login)
             widget.setCurrentIndex(widget.currentIndex()+1)
-
-class ProdWindow(QDialog):
+            
+class Menu(QDialog):
     def __init__(self):
-        super(ProdWindow, self).__init__()
-        loadUi("prodtable.ui", self)
+        super(Menu, self).__init__()
+        loadUi("menu.ui", self)
+        widget.setFixedWidth(620)
+        widget.setFixedHeight(480)
+        self.addbutton.clicked.connect(self.gotoaddprod)
+        self.reportbutton.clicked.connect(self.gotoreports)
+        
+    def gotoaddprod(self):
+        addprod = AddProduct()
+        widget.addWidget(addprod)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def gotoreports(self):
+        reports = Reports()
+        widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
+class AddProduct(QDialog):
+    def __init__(self):
+        super(AddProduct, self).__init__()
+        loadUi("addprod.ui", self)
+        self.backbutton.clicked.connect(self.backtomenu)
+        self.donebutton.clicked.connect(self.backtomenu)
+        #done button creates the entered product as well
+        
+        
+    def backtomenu(self):
+        menu=Menu()
+        widget.addWidget(menu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+class Reports(QDialog):
+    def __init__(self):
+        super(Reports, self).__init__()
+        loadUi("report.ui", self)
+        widget.setFixedWidth(620)
+        widget.setFixedHeight(480)
+        self.prodbutton.clicked.connect(self.gotoprodtab)
+        self.backbutton.clicked.connect(self.backtomenu)
+    def backtomenu(self):
+        menu=Menu()
+        widget.addWidget(menu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def gotoprodtab(self):
+        prodtable = ProdTable()
+        widget.addWidget(prodtable)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+class ProdTable(QDialog):
+    def __init__(self):
+        super(ProdTable, self).__init__()
+        loadUi("prodtable.ui", self)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.backbutton.clicked.connect(self.backtoreports)
+        
     def loaddata(self):
-        med=[]
+        pass
+    
+    def backtoreports(self):
+        reports=Reports()
+        widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
         
 app=QApplication(sys.argv)

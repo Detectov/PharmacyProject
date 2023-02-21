@@ -94,6 +94,23 @@ color: rgb(255, 255, 255);</string>
     </property>
    </column>
   </widget>
+  <widget class="QPushButton" name="backbutton">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>680</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 208, 93);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Back to Reports</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

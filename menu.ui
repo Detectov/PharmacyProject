@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>562</width>
-    <height>613</height>
+    <width>620</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>260</x>
      <y>50</y>
      <width>121</width>
      <height>61</height>
@@ -32,24 +32,11 @@
     <string>Menu</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QPushButton" name="addbutton">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>130</y>
-     <width>191</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PROYECT BY JARED AND MOU </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>180</y>
+     <x>220</x>
+     <y>160</y>
      <width>171</width>
      <height>61</height>
     </rect>
@@ -65,8 +52,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>270</y>
+     <x>220</x>
+     <y>240</y>
      <width>171</width>
      <height>61</height>
     </rect>
@@ -79,11 +66,11 @@ color: rgb(255, 255, 255);</string>
     <string>CREATE  SALE </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="reportbutton">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>360</y>
+     <x>220</x>
+     <y>320</y>
      <width>171</width>
      <height>61</height>
     </rect>

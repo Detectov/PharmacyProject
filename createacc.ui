@@ -121,19 +121,6 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>SIGN UP</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>120</y>
-     <width>191</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PROYECT BY JARED AND MOU </string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="confirmpass">
    <property name="geometry">
     <rect>
