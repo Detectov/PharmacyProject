@@ -113,7 +113,7 @@ color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(167, 168, 167);
+    <string notr="true">background-color: rgb(156, 208, 93);
 color: rgb(255, 255, 255);
 font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
@@ -144,7 +144,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(167, 168, 167);
+    <string notr="true">background-color: rgb(156, 208, 93);
 color: rgb(255, 255, 255);
 font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>

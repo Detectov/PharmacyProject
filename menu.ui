@@ -19,24 +19,24 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>210</x>
      <y>50</y>
-     <width>181</width>
+     <width>121</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(231, 231, 231);font-size:28pt;</string>
+    <string notr="true">color: rgb(255, 255, 255);font-size:28pt;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>Menu</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>120</y>
+     <x>180</x>
+     <y>130</y>
      <width>191</width>
      <height>16</height>
     </rect>
@@ -48,14 +48,15 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>160</y>
+     <x>180</x>
+     <y>180</y>
      <width>171</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(167, 168, 167);</string>
+    <string notr="true">background-color: rgb(156, 208, 93);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>ADD PRODUCTS</string>
@@ -64,14 +65,15 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>240</y>
+     <x>180</x>
+     <y>270</y>
      <width>171</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(167, 168, 167);</string>
+    <string notr="true">background-color: rgb(156, 208, 93);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>CREATE  SALE </string>
@@ -80,14 +82,15 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>320</y>
+     <x>180</x>
+     <y>360</y>
      <width>171</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(167, 168, 167);</string>
+    <string notr="true">background-color: rgb(156, 208, 93);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>REPORTS </string>
