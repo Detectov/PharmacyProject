@@ -59,6 +59,7 @@ class Menu(QDialog):
         widget.setFixedHeight(480)
         self.addbutton.clicked.connect(self.gotoaddprod)
         self.reportbutton.clicked.connect(self.gotoreports)
+        self.addsalebutton.clicked.connect(self.gotoaddsale)
         
     def gotoaddprod(self):
         addprod = AddProduct()
@@ -68,6 +69,11 @@ class Menu(QDialog):
     def gotoreports(self):
         reports = Reports()
         widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def gotoaddsale(self):
+        addsale = AddSale()
+        widget.addWidget(addsale)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 class AddProduct(QDialog):
@@ -83,6 +89,23 @@ class AddProduct(QDialog):
         menu=Menu()
         widget.addWidget(menu)
         widget.setCurrentIndex(widget.currentIndex()+1)
+        
+class AddSale(QDialog):
+    def __init__(self):
+        super(AddSale, self).__init__()
+        loadUi("createsale.ui", self)
+        widget.setFixedHeight(480)
+        widget.setFixedWidth(772)
+        self.backbutton.clicked.connect(self.backtomenu)
+        self.donebutton.clicked.connect(self.backtomenu)
+        #done button creates the entered sale as well
+        
+    def backtomenu(self):
+        menu=Menu()
+        widget.addWidget(menu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+     
         
 class Reports(QDialog):
     def __init__(self):
