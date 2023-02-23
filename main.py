@@ -116,6 +116,7 @@ class Reports(QDialog):
         self.prodbutton.clicked.connect(self.gotoprodtab)
         self.salesbutton.clicked.connect(self.gotosalestab)
         self.backbutton.clicked.connect(self.backtomenu)
+        self.salesmenubutton.clicked.connect(self.gotosalesmenu)
         
     def backtomenu(self):
         menu=Menu()
@@ -130,6 +131,11 @@ class Reports(QDialog):
     def gotosalestab(self):
         salestable = SalesTable()
         widget.addWidget(salestable)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def gotosalesmenu(self):
+        salesmenu = SalesMenu()
+        widget.addWidget(salesmenu)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
 class ProdTable(QDialog):
@@ -164,7 +170,68 @@ class SalesTable(QDialog):
         reports=Reports()
         widget.addWidget(reports)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+class SalesMenu(QDialog):
+    def __init__(self):
+        super(SalesMenu, self).__init__()
+        loadUi("salesmenu.ui", self)
+        widget.setFixedWidth(620)
+        widget.setFixedHeight(480)
+        self.cardbutton.clicked.connect(self.gotocards)
+        self.cashbutton.clicked.connect(self.gotocash)
+        self.backbutton.clicked.connect(self.backtoreports)
+
+    def gotocards(self):
+        cards = SalesByCard()
+        widget.addWidget(cards)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def gotocash(self):
+        cash = SalesByCash()
+        widget.addWidget(cash)
+        widget.setCurrentIndex(widget.currentIndex()+1)
         
+    def backtoreports(self):
+        reports=Reports()
+        widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+   
+
+
+class SalesByCard(QDialog):
+    def __init__(self):
+        super(SalesByCard, self).__init__()
+        loadUi("salesbycard.ui", self)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.backbutton.clicked.connect(self.backtosalesmenu)
+
+    def loaddata(self):
+        pass
+    
+    def backtosalesmenu(self):
+        salesmenu=SalesMenu()
+        widget.addWidget(salesmenu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+class SalesByCash(QDialog):
+    def __init__(self):
+        super(SalesByCash, self).__init__()
+        loadUi("salesbycash.ui",self)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.backbutton.clicked.connect(self.backtosalesmenu)
+
+    def loaddata(self):
+        pass
+
+    def backtosalesmenu(self):
+        salesmenu = SalesMenu()
+        widget.addWidget(salesmenu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+            
 app=QApplication(sys.argv)
 mainwindow=Login()
 widget=QtWidgets.QStackedWidget()

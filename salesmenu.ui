@@ -19,9 +19,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>40</y>
-     <width>161</width>
+     <x>70</x>
+     <y>60</y>
+     <width>491</width>
      <height>61</height>
     </rect>
    </property>
@@ -29,14 +29,14 @@
     <string notr="true">color: rgb(255, 255, 255);font-size:28pt;</string>
    </property>
    <property name="text">
-    <string>Reports</string>
+    <string>Sales by Payment Type</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="prodbutton">
+  <widget class="QPushButton" name="cardbutton">
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>120</y>
+     <y>160</y>
      <width>171</width>
      <height>61</height>
     </rect>
@@ -46,14 +46,14 @@
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>VIEW PRODUCTS </string>
+    <string>Card</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="salesbutton">
+  <widget class="QPushButton" name="cashbutton">
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>200</y>
+     <y>290</y>
      <width>171</width>
      <height>61</height>
     </rect>
@@ -63,48 +63,14 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>VIEW SALES </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="salesmenubutton">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>280</y>
-     <width>171</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(156, 208, 93);
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>SALES BY PAYMENT TYPE</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>360</y>
-     <width>171</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(156, 208, 93);
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>VIEW PRODUCTS BY LAB</string>
+    <string>Cash</string>
    </property>
   </widget>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>430</y>
+     <x>480</x>
+     <y>420</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -114,7 +80,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Back To Menu</string>
+    <string>Back to Reports</string>
    </property>
   </widget>
  </widget>
