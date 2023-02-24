@@ -36,9 +36,9 @@ background-color: rgb(23, 136, 211);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>70</x>
      <y>200</y>
-     <width>81</width>
+     <width>121</width>
      <height>21</height>
     </rect>
    </property>
@@ -48,7 +48,7 @@ color: rgb(255, 255, 255);
 </string>
    </property>
    <property name="text">
-    <string>Email : </string>
+    <string>Username : </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -66,10 +66,10 @@ color: rgb(255, 255, 255);
 </string>
    </property>
    <property name="text">
-    <string>Password : </string>
+    <string>Password </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="email">
+  <widget class="QLineEdit" name="username_input">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -86,7 +86,7 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="password">
+  <widget class="QLineEdit" name="password_input">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -101,6 +101,9 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
    </property>
   </widget>
   <widget class="QPushButton" name="loginbutton">
@@ -134,7 +137,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>PROYECT BY JARED AND MOU </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="createaccbutton">
+  <widget class="QPushButton" name="createbutton">
    <property name="geometry">
     <rect>
      <x>380</x>

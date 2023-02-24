@@ -1,69 +1,74 @@
 import sys 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 
-import sys
-from PyQt5 import QtWidgets, QtGui
 
-class LoginWindow(QtWidgets.QWidget):
+
+class Login(QDialog):
     def __init__(self):
-        super().__init__()
-
-        self.username_label = QtWidgets.QLabel('Nombre de usuario')
-        self.password_label = QtWidgets.QLabel('Contraseña')
-
-        self.username_input = QtWidgets.QLineEdit()
-        self.password_input = QtWidgets.QLineEdit()
-        self.password_input.setEchoMode(QtWidgets.QLineEdit.Password)
-
-        self.login_button = QtWidgets.QPushButton('Iniciar sesión')
-        self.signup_button = QtWidgets.QPushButton('Registrarse')
-
-        layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(self.username_label)
-        layout.addWidget(self.username_input)
-        layout.addWidget(self.password_label)
-        layout.addWidget(self.password_input)
-        layout.addWidget(self.login_button)
-        layout.addWidget(self.signup_button)
-        self.setLayout(layout)
-
-        self.login_button.clicked.connect(self.login)
-        self.signup_button.clicked.connect(self.signup)
+        super(Login,self).__init__()
+        loadUi("login.ui",self)
+        
+        self.createbutton.clicked.connect(self.signup)
+        self.loginbutton.clicked.connect(self.login)
+        
 
     def login(self):
         username = self.username_input.text()
         password = self.password_input.text()
-
         with open('users.txt', 'r') as f:
             for line in f:
                 u, p = line.strip().split(',')
                 if u == username and p == password:
-                    QtWidgets.QMessageBox.information(self, 'Inicio de sesión exitoso', '¡Bienvenido, {}!'.format(username))
+                    QtWidgets.QMessageBox.information(self, 'Login succesful!', 'Welcome, {}!'.format(username))
+                    menu=Menu()
+                    widget.addWidget(menu)
+                    widget.setCurrentIndex(widget.currentIndex()+1)
                     widget.setCurrentIndex(widget.currentIndex()+1)
                     return
-
-        QtWidgets.QMessageBox.warning(self, 'Inicio de sesión fallido', 'Nombre de usuario o contraseña incorrectos')
-
+        QtWidgets.QMessageBox.warning(self, 'Login failed', 'Username or password not valid')
     def signup(self):
         username = self.username_input.text()
         password = self.password_input.text()
-
         if not username or not password:
-            QtWidgets.QMessageBox.warning(self, 'Error', 'Debe ingresar un nombre de usuario y contraseña')
+            QtWidgets.QMessageBox.warning(self, 'Error', 'You need to enter a username and a password')
             return
 
         with open('users.txt', 'a') as f:
             f.write('{},{}\n'.format(username, password))
 
-        QtWidgets.QMessageBox.information(self, 'Registro exitoso', '¡La cuenta de usuario ha sido creada!')
+        QtWidgets.QMessageBox.information(self, 'Account created', 'The account has been created!')
 
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    window = LoginWindow()  
-    window.show()
-    sys.exit(app.exec_())
+    
+        
+
+class Menu(QDialog):
+    def __init__(self):
+        super(Menu, self).__init__()
+        loadUi("menu.ui", self)
+        widget.setFixedWidth(620)
+        widget.setFixedHeight(480)
+        self.addbutton.clicked.connect(self.gotoaddprod)
+        self.reportbutton.clicked.connect(self.gotoreports)
+        self.addsalebutton.clicked.connect(self.gotoaddsale)
+
+    def gotoaddprod(self):
+        addprod = AddProduct()
+        widget.addWidget(addprod)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def gotoreports(self):
+        reports = Reports()
+        widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def gotoaddsale(self):
+        addsale = AddSale()
+        widget.addWidget(addsale)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+
 
 class AddProduct(QDialog):
     def __init__(self):
@@ -222,11 +227,10 @@ class SalesByCash(QDialog):
 
             
 app=QApplication(sys.argv)
-mainwindow=Login()
-
+mainwindow =Login()
 widget=QtWidgets.QStackedWidget()
-widget.addWidget(mainwindow)
 widget.setFixedWidth(620)
 widget.setFixedHeight(480)
+widget.addWidget(mainwindow)
 widget.show()
 app.exec_()
