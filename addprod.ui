@@ -143,8 +143,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_4">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>160</y>
+     <x>140</x>
+     <y>290</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -173,8 +173,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_5">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>290</y>
+     <x>140</x>
+     <y>340</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -203,8 +203,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_6">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>290</y>
+     <x>470</x>
+     <y>160</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -293,8 +293,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_9">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>340</y>
+     <x>470</x>
+     <y>290</y>
      <width>113</width>
      <height>22</height>
     </rect>

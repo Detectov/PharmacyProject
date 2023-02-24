@@ -253,7 +253,7 @@ class viewProd(QDialog):
 
             
 app=QApplication(sys.argv)
-mainwindow =Login()
+mainwindow = Login()
 widget=QtWidgets.QStackedWidget()
 widget.setFixedWidth(620)
 widget.setFixedHeight(480)
