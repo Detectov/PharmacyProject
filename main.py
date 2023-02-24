@@ -111,6 +111,7 @@ class Reports(QDialog):
         self.salesbutton.clicked.connect(self.gotosalestab)
         self.backbutton.clicked.connect(self.backtomenu)
         self.salesmenubutton.clicked.connect(self.gotosalesmenu)
+        self.labbutton.clicked.connect(self.gotolab)
         
     def backtomenu(self):
         menu=Menu()
@@ -130,6 +131,11 @@ class Reports(QDialog):
     def gotosalesmenu(self):
         salesmenu = SalesMenu()
         widget.addWidget(salesmenu)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def gotolab(self):
+        lab= viewProd()
+        widget.addWidget(lab)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
 class ProdTable(QDialog):
@@ -175,6 +181,7 @@ class SalesMenu(QDialog):
         self.cashbutton.clicked.connect(self.gotocash)
         self.backbutton.clicked.connect(self.backtoreports)
 
+
     def gotocards(self):
         cards = SalesByCard()
         widget.addWidget(cards)
@@ -189,6 +196,8 @@ class SalesMenu(QDialog):
         reports=Reports()
         widget.addWidget(reports)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+    
 
    
 
@@ -224,6 +233,23 @@ class SalesByCash(QDialog):
         salesmenu = SalesMenu()
         widget.addWidget(salesmenu)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+class viewProd(QDialog):
+    def __init__(self):
+        super(viewProd, self).__init__()
+        loadUi("viewbylab.ui",self)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.donebutton.clicked.connect(self.loaddata)
+        self.backbutton.clicked.connect(self.backtoreports)
+    def loaddata(self):
+        pass
+
+    def backtoreports(self):
+        reports=Reports()
+        widget.addWidget(reports)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
 
             
 app=QApplication(sys.argv)
