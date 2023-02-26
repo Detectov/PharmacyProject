@@ -286,9 +286,21 @@ class SalesByCard(QDialog):
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtosalesmenu)
+        self.loaddata()
 
     def loaddata(self):
-        pass
+        row=0
+        self.tableWidget.setRowCount(len(sales))
+        for i in sales:
+            if i["method"].lower == "card":
+                self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
+                self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
+                self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(i["amount"])))
+                self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(str(i["subtotal"])))
+                self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(i["total"])))
+                self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(i["method"]))
+                self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(i["billed"]))
+                row = row + 1
     
     def backtosalesmenu(self):
         salesmenu=SalesMenu()
@@ -302,9 +314,21 @@ class SalesByCash(QDialog):
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtosalesmenu)
+        self.loaddata()
 
     def loaddata(self):
-        pass
+        row=0
+        self.tableWidget.setRowCount(len(sales))
+        for i in sales:
+            if i["method"].lower == "cash":
+                self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
+                self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
+                self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(i["amount"])))
+                self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(str(i["subtotal"])))
+                self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(i["total"])))
+                self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(i["method"]))
+                self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(i["billed"]))
+                row = row + 1
 
     def backtosalesmenu(self):
         salesmenu = SalesMenu()
@@ -321,6 +345,7 @@ class viewProd(QDialog):
         self.backbutton.clicked.connect(self.backtoreports)
     def loaddata(self):
         pass
+            
 
     def backtoreports(self):
         reports=Reports()
