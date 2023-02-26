@@ -50,11 +50,6 @@ color: rgb(255, 255, 255);</string>
    </property>
    <column>
     <property name="text">
-     <string>OrderNum</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Date</string>
     </property>
    </column>

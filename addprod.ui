@@ -33,71 +33,11 @@ color: rgb(255, 255, 255);</string>
     <string>Add a Product</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>150</y>
-     <width>41</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>ID: </string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>160</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>190</y>
-     <width>71</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>SKU:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>200</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>230</y>
+     <x>50</x>
+     <y>150</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -110,11 +50,11 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Name:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="nameinput">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>240</y>
+     <x>150</x>
+     <y>160</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -140,11 +80,11 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Presentation: </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="stockinput">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>290</y>
+     <x>150</x>
+     <y>200</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -170,11 +110,11 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Laboratory:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="taxinput">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>340</y>
+     <x>150</x>
+     <y>240</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -186,8 +126,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>280</y>
+     <x>50</x>
+     <y>190</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -200,7 +140,7 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Stock:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="presinput">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -230,7 +170,7 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Cost Value:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
+  <widget class="QLineEdit" name="costinput">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -260,7 +200,7 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Sale Value:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_8">
+  <widget class="QLineEdit" name="saleinput">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -276,8 +216,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>330</y>
+     <x>70</x>
+     <y>230</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -290,7 +230,7 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>TAX:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_9">
+  <widget class="QLineEdit" name="labinput">
    <property name="geometry">
     <rect>
      <x>470</x>

@@ -33,41 +33,11 @@ color: rgb(255, 255, 255);</string>
     <string>Add a Sale</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>150</y>
-     <width>191</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>OrderNumber:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>160</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>230</y>
+     <x>60</x>
+     <y>190</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -80,11 +50,11 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Amount:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="dateinput">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>200</y>
+     <x>180</x>
+     <y>160</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -96,8 +66,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>190</y>
+     <x>320</x>
+     <y>150</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -110,25 +80,12 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Sold products: </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="soldinput">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>240</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>280</y>
-     <width>113</width>
+     <x>520</x>
+     <y>160</y>
+     <width>231</width>
      <height>22</height>
     </rect>
    </property>
@@ -139,65 +96,9 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>270</y>
-     <width>151</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Laboratory:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>320</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>160</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
+     <x>320</x>
      <y>200</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>230</y>
-     <width>151</width>
+     <width>191</width>
      <height>41</height>
     </rect>
    </property>
@@ -206,14 +107,27 @@ font: 75 18pt &quot;Arial&quot;;</string>
 font: 75 18pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
-    <string>Sale Value:</string>
+    <string>Was it billed?</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_8">
+  <widget class="QLineEdit" name="amountinput">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>240</y>
+     <x>180</x>
+     <y>200</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="methodinput">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>250</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -222,28 +136,11 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_10">
+  <widget class="QLineEdit" name="billedinput">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>310</y>
-     <width>71</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Total:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_9">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>280</y>
+     <x>520</x>
+     <y>210</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -287,28 +184,11 @@ color: rgb(255, 255, 255);</string>
     <string>Done</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>270</y>
-     <width>121</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Subtotal:</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>190</y>
+     <x>100</x>
+     <y>150</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -324,9 +204,9 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>231</width>
+     <x>280</x>
+     <y>240</y>
+     <width>241</width>
      <height>41</height>
     </rect>
    </property>
@@ -335,7 +215,7 @@ font: 75 18pt &quot;Arial&quot;;</string>
 font: 75 18pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
-    <string>PaymentMethod:</string>
+    <string>Payment Method:</string>
    </property>
   </widget>
  </widget>

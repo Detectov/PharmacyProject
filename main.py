@@ -2,8 +2,10 @@ import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
+from datetime import date
 
-
+products = []
+sales = []
 
 class Login(QDialog):
     def __init__(self):
@@ -40,8 +42,8 @@ class Login(QDialog):
 
         QtWidgets.QMessageBox.information(self, 'Account created', 'The account has been created!')
 
+
     
-        
 
 class Menu(QDialog):
     def __init__(self):
@@ -71,14 +73,29 @@ class Menu(QDialog):
 
 
 class AddProduct(QDialog):
+    
     def __init__(self):
         super(AddProduct, self).__init__()
         loadUi("addprod.ui", self)
         self.backbutton.clicked.connect(self.backtomenu)
         self.donebutton.clicked.connect(self.backtomenu)
-        #done button creates the entered product as well
-        
-        
+        self.donebutton.clicked.connect(self.savedata)
+    def savedata(self):
+        proddict = {
+            "id" : len(products)+1,
+            "sku" : self.nameinput.text()[0:3],
+            "name" : self.nameinput.text(),
+            "stock" : self.stockinput.text(),
+            "tax" : self.taxinput.text(),
+            "presentation" : self.presinput.text(),
+            "costvalue" : self.costinput.text(),
+            "salevalue" : self.saleinput.text(),
+            "laboratory" : self.labinput.text()
+        }
+        products.append(proddict)
+           
+            
+         
     def backtomenu(self):
         menu=Menu()
         widget.addWidget(menu)
@@ -92,7 +109,21 @@ class AddSale(QDialog):
         widget.setFixedWidth(772)
         self.backbutton.clicked.connect(self.backtomenu)
         self.donebutton.clicked.connect(self.backtomenu)
-        #done button creates the entered sale as well
+        self.donebutton.clicked.connect(self.savedata)
+
+    def savedata(self):
+        saledict = {
+            "orderid" : len(sales)+1,
+            "date" : date.today(),
+            "soldprod" : self.soldinput.text(),
+            "amount" : self.amountinout.text(),
+            "billed": self.billedinput.text(),
+            "method":self.methodinput.text()
+        }
+        sales.append(saledict)
+        for p in products:
+            newstock = products.stock - sales.amount
+            newstock.append(products)
         
     def backtomenu(self):
         menu=Menu()
@@ -142,12 +173,32 @@ class ProdTable(QDialog):
     def __init__(self):
         super(ProdTable, self).__init__()
         loadUi("prodtable.ui", self)
+        self.tableWidget.setColumnWidth(1,250)
+        self.tableWidget.setColumnWidth(2,250)
+        self.tableWidget.setColumnWidth(3,250)
+        self.tableWidget.setColumnWidth(4,250)
+        self.tableWidget.setColumnWidth(5,250)
+        self.tableWidget.setColumnWidth(6,250)
+        self.tableWidget.setColumnWidth(7,250)
+        self.tableWidget.setColumnWidth(8,250)
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtoreports)
+        self.loaddata()
         
     def loaddata(self):
-        pass
+        row = 0
+        self.tableWidget.setRowCount(len(products))
+        for product in products:
+            self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(product["sku"]))
+            self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(product["name"]))
+            self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(product["presentation"]))
+            self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(product["laboratory"]))
+            self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(product["stock"]))
+            self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(product["costvalue"]))
+            self.tableWidget.setItem(row, 7, QtWidgets.QTableWidgetItem(product["salevalue"]))
+            self.tableWidget.setItem(row, 8, QtWidgets.QTableWidgetItem(product["tax"]))
+            row = row + 1 
     
     def backtoreports(self):
         reports=Reports()
@@ -159,12 +210,30 @@ class SalesTable(QDialog):
     def __init__(self):
         super(SalesTable, self).__init__()
         loadUi("saletable.ui", self)
+        self.tableWidget.setColumnWidth(1,250)
+        self.tableWidget.setColumnWidth(2,250)
+        self.tableWidget.setColumnWidth(3,250)
+        self.tableWidget.setColumnWidth(4,250)
+        self.tableWidget.setColumnWidth(5,250)
+        self.tableWidget.setColumnWidth(6,250)
+        self.tableWidget.setColumnWidth(7,250)
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtoreports)
+        self.loaddata()
         
     def loaddata(self):
-        pass
+        row = 0
+        self.tableWidget.setRowCount(len(sales))
+        for sale in sales:
+            self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(sale["date"]))
+            self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(sale["soldprod"]))
+            self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(sale["amount"]))
+            self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(sale["subtotal"]))
+            self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(sale["total"]))
+            self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(sale["method"]))
+            self.tableWidget.setItem(row, 7, QtWidgets.QTableWidgetItem(sale["billed"]))
+            row = row + 1
     
     def backtoreports(self):
         reports=Reports()
