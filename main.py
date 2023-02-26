@@ -283,16 +283,23 @@ class SalesByCard(QDialog):
     def __init__(self):
         super(SalesByCard, self).__init__()
         loadUi("salesbycard.ui", self)
+        self.tableWidget.setColumnWidth(0,250)
+        self.tableWidget.setColumnWidth(1,250)
+        self.tableWidget.setColumnWidth(2,250)
+        self.tableWidget.setColumnWidth(3,250)
+        self.tableWidget.setColumnWidth(4,250)
+        self.tableWidget.setColumnWidth(5,250)
+        self.tableWidget.setColumnWidth(6,250)
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtosalesmenu)
         self.loaddata()
 
     def loaddata(self):
-        row=0
-        self.tableWidget.setRowCount(len(sales))
+        row = 0
         for i in sales:
             if i["method"].lower == "card":
+                self.tableWidget.setRowCount(len(sales))
                 self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
                 self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
                 self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(i["amount"])))
@@ -311,16 +318,23 @@ class SalesByCash(QDialog):
     def __init__(self):
         super(SalesByCash, self).__init__()
         loadUi("salesbycash.ui",self)
+        self.tableWidget.setColumnWidth(0,250)
+        self.tableWidget.setColumnWidth(1,250)
+        self.tableWidget.setColumnWidth(2,250)
+        self.tableWidget.setColumnWidth(3,250)
+        self.tableWidget.setColumnWidth(4,250)
+        self.tableWidget.setColumnWidth(5,250)
+        self.tableWidget.setColumnWidth(6,250)
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtosalesmenu)
         self.loaddata()
 
     def loaddata(self):
-        row=0
-        self.tableWidget.setRowCount(len(sales))
+        row = 0
         for i in sales:
             if i["method"].lower == "cash":
+                self.tableWidget.setRowCount(len(sales))
                 self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
                 self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
                 self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(i["amount"])))
