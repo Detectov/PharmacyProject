@@ -82,7 +82,6 @@ class AddProduct(QDialog):
         self.donebutton.clicked.connect(self.savedata)
     def savedata(self):
         proddict = {
-            "id" : len(products)+1,
             "sku" : self.nameinput.text()[0:3],
             "name" : self.nameinput.text(),
             "stock" : self.stockinput.text(),
@@ -113,10 +112,9 @@ class AddSale(QDialog):
 
     def savedata(self):
         saledict = {
-            "orderid" : len(sales)+1,
             "date" : date.today(),
             "soldprod" : self.soldinput.text(),
-            "amount" : self.amountinout.text(),
+            "amount" : self.amountinput.text(),
             "billed": self.billedinput.text(),
             "method":self.methodinput.text()
         }
@@ -173,6 +171,7 @@ class ProdTable(QDialog):
     def __init__(self):
         super(ProdTable, self).__init__()
         loadUi("prodtable.ui", self)
+        self.tableWidget.setColumnWidth(0,250)
         self.tableWidget.setColumnWidth(1,250)
         self.tableWidget.setColumnWidth(2,250)
         self.tableWidget.setColumnWidth(3,250)
@@ -180,7 +179,6 @@ class ProdTable(QDialog):
         self.tableWidget.setColumnWidth(5,250)
         self.tableWidget.setColumnWidth(6,250)
         self.tableWidget.setColumnWidth(7,250)
-        self.tableWidget.setColumnWidth(8,250)
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtoreports)
@@ -190,14 +188,14 @@ class ProdTable(QDialog):
         row = 0
         self.tableWidget.setRowCount(len(products))
         for product in products:
-            self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(product["sku"]))
-            self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(product["name"]))
-            self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(product["presentation"]))
-            self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(product["laboratory"]))
-            self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(product["stock"]))
-            self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(product["costvalue"]))
-            self.tableWidget.setItem(row, 7, QtWidgets.QTableWidgetItem(product["salevalue"]))
-            self.tableWidget.setItem(row, 8, QtWidgets.QTableWidgetItem(product["tax"]))
+            self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(product["sku"]))
+            self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(product["name"]))
+            self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(product["presentation"]))
+            self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(product["laboratory"]))
+            self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(product["stock"]))
+            self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(product["costvalue"]))
+            self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(product["salevalue"]))
+            self.tableWidget.setItem(row, 7, QtWidgets.QTableWidgetItem(product["tax"]))
             row = row + 1 
     
     def backtoreports(self):

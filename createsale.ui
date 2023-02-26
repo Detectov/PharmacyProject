@@ -36,8 +36,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>190</y>
+     <x>280</x>
+     <y>220</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -50,24 +50,11 @@ font: 75 18pt &quot;Arial&quot;;</string>
     <string>Amount:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="dateinput">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>160</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>150</y>
+     <x>200</x>
+     <y>170</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -83,8 +70,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="soldinput">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>160</y>
+     <x>410</x>
+     <y>180</y>
      <width>231</width>
      <height>22</height>
     </rect>
@@ -96,8 +83,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>200</y>
+     <x>210</x>
+     <y>270</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -113,9 +100,9 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="amountinput">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>200</y>
-     <width>111</width>
+     <x>410</x>
+     <y>230</y>
+     <width>231</width>
      <height>22</height>
     </rect>
    </property>
@@ -126,8 +113,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="methodinput">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>250</y>
+     <x>410</x>
+     <y>330</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -139,8 +126,8 @@ font: 75 18pt &quot;Arial&quot;;</string>
   <widget class="QLineEdit" name="billedinput">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>210</y>
+     <x>410</x>
+     <y>280</y>
      <width>113</width>
      <height>22</height>
     </rect>
@@ -184,28 +171,11 @@ color: rgb(255, 255, 255);</string>
     <string>Done</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_11">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>150</y>
-     <width>71</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 18pt &quot;Arial&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Date:</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>240</y>
+     <x>160</x>
+     <y>320</y>
      <width>241</width>
      <height>41</height>
     </rect>
