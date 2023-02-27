@@ -81,7 +81,7 @@ class AddProduct(QDialog):
         self.backbutton.clicked.connect(self.backtomenu)
         self.donebutton.clicked.connect(self.backtomenu)
         self.donebutton.clicked.connect(self.savedata)
-    def savedata(self):
+    def savedata(self): 
         proddict = {
             "sku" : self.nameinput.text()[0:3],
             "name" : self.nameinput.text(),
@@ -90,7 +90,8 @@ class AddProduct(QDialog):
             "presentation" : self.presinput.text(),
             "costvalue" : float(self.costinput.text()),
             "salevalue" : float(self.saleinput.text()),
-            "laboratory" : self.labinput.text()
+            "laboratory" : self.labinput.text(),
+            "expdate" : self.expdate.text()
         }
         products.append(proddict)
            
@@ -121,16 +122,26 @@ class AddSale(QDialog):
             "subtotal" : 0,
             "total" : 0
         }
+        if not "date" or not "soldprod" or not "amount" or not "billed" or not "method":
+                QtWidgets.QMessageBox.warning(self, 'Error', 'Please enter all values')
+                return
         for i in products:
             if i["name"] == saledict["soldprod"]:
-                i["stock"] -= saledict["amount"]
-                saledict["subtotal"] = i["salevalue"]*saledict["amount"]
-                if i["tax"]!="Y":
-                     saledict["total"] = saledict["subtotal"] 
+                if i["stock"] > saledict["amount"]:
+                     i["stock"] -= saledict["amount"]
+                     saledict["subtotal"] = i["salevalue"]*saledict["amount"]
+                     if i["tax"]!="Y":
+                      saledict["total"] = saledict["subtotal"] 
+                      sales.append(saledict)
+                     else:
+                      saledict["total"] = saledict["subtotal"] *1.16
+                      sales.append(saledict)
+                     break
+                     
                 else:
-                    saledict["total"] = saledict["subtotal"] *1.16
-                break
-        sales.append(saledict)       
+                    QtWidgets.QMessageBox.warning(self, 'Error', "There's not enough stock for that sale")   
+         
+               
         
         
     def backtomenu(self):
@@ -189,6 +200,7 @@ class ProdTable(QDialog):
         self.tableWidget.setColumnWidth(5,250)
         self.tableWidget.setColumnWidth(6,250)
         self.tableWidget.setColumnWidth(7,250)
+        self.tableWidget.setColumnWidth(7,250)
         widget.setFixedWidth(1067)
         widget.setFixedHeight(735)
         self.backbutton.clicked.connect(self.backtoreports)
@@ -206,7 +218,8 @@ class ProdTable(QDialog):
             self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(str(product["costvalue"])))
             self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(str(product["salevalue"])))
             self.tableWidget.setItem(row, 7, QtWidgets.QTableWidgetItem(product["tax"]))
-            row = row + 1 
+            self.tableWidget.setItem(row, 8, QtWidgets.QTableWidgetItem(str(product["expdate"])))
+            row += 1 
     
     def backtoreports(self):
         reports=Reports()
@@ -241,7 +254,7 @@ class SalesTable(QDialog):
             self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(sale["total"])))
             self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(sale["method"]))
             self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(sale["billed"]))
-            row = row + 1
+            row += 1
     
     def backtoreports(self):
         reports=Reports()
@@ -298,7 +311,7 @@ class SalesByCard(QDialog):
     def loaddata(self):
         row = 0
         for i in sales:
-            if i["method"].lower == "card":
+            if i["method"] == "Card":
                 self.tableWidget.setRowCount(len(sales))
                 self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
                 self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
@@ -307,7 +320,8 @@ class SalesByCard(QDialog):
                 self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(i["total"])))
                 self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(i["method"]))
                 self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(i["billed"]))
-                row = row + 1
+                row += 1
+            
     
     def backtosalesmenu(self):
         salesmenu=SalesMenu()
@@ -333,7 +347,7 @@ class SalesByCash(QDialog):
     def loaddata(self):
         row = 0
         for i in sales:
-            if i["method"].lower == "cash":
+            if i["method"] == "Cash":
                 self.tableWidget.setRowCount(len(sales))
                 self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
                 self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
@@ -342,7 +356,8 @@ class SalesByCash(QDialog):
                 self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(i["total"])))
                 self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(i["method"]))
                 self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(i["billed"]))
-                row = row + 1
+                row += 1
+            
 
     def backtosalesmenu(self):
         salesmenu = SalesMenu()
@@ -358,9 +373,20 @@ class viewProd(QDialog):
         self.donebutton.clicked.connect(self.loaddata)
         self.backbutton.clicked.connect(self.backtoreports)
     def loaddata(self):
-        pass
-            
-
+        row = 0
+        for product in products:
+            if product["laboratory"] == self.labinput.text():
+                self.tableWidget.setRowCount(len(products))
+                self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(product["sku"]))
+                self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(product["name"]))
+                self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(product["presentation"]))
+                self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(product["laboratory"]))
+                self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(product["stock"])))
+                self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(str(product["costvalue"])))
+                self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(str(product["salevalue"])))
+                self.tableWidget.setItem(row, 7, QtWidgets.QTableWidgetItem(product["tax"]))
+                self.tableWidget.setItem(row, 8, QtWidgets.QTableWidgetItem(str(product["expdate"])))
+                row += 1 
     def backtoreports(self):
         reports=Reports()
         widget.addWidget(reports)

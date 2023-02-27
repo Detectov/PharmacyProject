@@ -278,6 +278,36 @@ color: rgb(255, 255, 255);</string>
     <string>Done</string>
    </property>
   </widget>
+  <widget class="QLineEdit" name="expdate">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>290</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 75 18pt &quot;Arial&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Exp Date:</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

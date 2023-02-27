@@ -88,6 +88,11 @@ color: rgb(255, 255, 255);</string>
      <string>Tax</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string>Expiration Date</string>
+    </property>
+   </column>
   </widget>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
