@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Documents\PROYECT\PharmacyProject\menu\report.ui'
+# Form implementation generated from reading ui file 'c:\Users\jared\OneDrive\Documentos\OBEJETOS\PharmacyProject\report.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,32 +14,37 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(562, 613)
+        Dialog.resize(620, 480)
         Dialog.setStyleSheet("background-color: rgb(23, 136, 211)")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(230, 50, 181, 61))
-        self.label.setStyleSheet("color: rgb(231, 231, 231);font-size:28pt;")
-        self.label.setText("")
+        self.label.setGeometry(QtCore.QRect(220, 40, 161, 61))
+        self.label.setStyleSheet("color: rgb(255, 255, 255);font-size:28pt;")
         self.label.setObjectName("label")
-        self.label_4 = QtWidgets.QLabel(Dialog)
-        self.label_4.setGeometry(QtCore.QRect(230, 120, 191, 16))
-        self.label_4.setObjectName("label_4")
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(230, 160, 171, 61))
-        self.pushButton.setStyleSheet("background-color: rgb(167, 168, 167);")
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setGeometry(QtCore.QRect(230, 240, 171, 61))
-        self.pushButton_2.setStyleSheet("background-color: rgb(167, 168, 167);")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_3.setGeometry(QtCore.QRect(230, 320, 171, 61))
-        self.pushButton_3.setStyleSheet("background-color: rgb(167, 168, 167);")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_4 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_4.setGeometry(QtCore.QRect(230, 400, 171, 61))
-        self.pushButton_4.setStyleSheet("background-color: rgb(167, 168, 167);")
-        self.pushButton_4.setObjectName("pushButton_4")
+        self.prodbutton = QtWidgets.QPushButton(Dialog)
+        self.prodbutton.setGeometry(QtCore.QRect(170, 120, 261, 61))
+        self.prodbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
+"color: rgb(255, 255, 255);")
+        self.prodbutton.setObjectName("prodbutton")
+        self.salesbutton = QtWidgets.QPushButton(Dialog)
+        self.salesbutton.setGeometry(QtCore.QRect(170, 200, 261, 61))
+        self.salesbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
+"color: rgb(255, 255, 255);")
+        self.salesbutton.setObjectName("salesbutton")
+        self.salesmenubutton = QtWidgets.QPushButton(Dialog)
+        self.salesmenubutton.setGeometry(QtCore.QRect(170, 280, 261, 61))
+        self.salesmenubutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
+"color: rgb(255, 255, 255);")
+        self.salesmenubutton.setObjectName("salesmenubutton")
+        self.labbutton = QtWidgets.QPushButton(Dialog)
+        self.labbutton.setGeometry(QtCore.QRect(170, 360, 261, 61))
+        self.labbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
+"color: rgb(255, 255, 255);")
+        self.labbutton.setObjectName("labbutton")
+        self.backbutton = QtWidgets.QPushButton(Dialog)
+        self.backbutton.setGeometry(QtCore.QRect(462, 417, 121, 41))
+        self.backbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
+"color: rgb(255, 255, 255);")
+        self.backbutton.setObjectName("backbutton")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -47,8 +52,10 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label_4.setText(_translate("Dialog", "PROYECT BY JARED AND MOU "))
-        self.pushButton.setText(_translate("Dialog", "VIEW PRODUCTS "))
-        self.pushButton_2.setText(_translate("Dialog", "VIEW SALES "))
-        self.pushButton_3.setText(_translate("Dialog", "SALES BY PYAMENT TYPE"))
-        self.pushButton_4.setText(_translate("Dialog", "VIEW PRODUCTS BY LAB"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p align=\"center\">Reports</p></body></html>"))
+        self.prodbutton.setText(_translate("Dialog", "VIEW PRODUCTS "))
+        self.salesbutton.setText(_translate("Dialog", "VIEW SALES "))
+        self.salesmenubutton.setText(_translate("Dialog", "SALES BY PAYMENT TYPE"))
+        self.labbutton.setText(_translate("Dialog", "VIEW PRODUCTS BY LAB"))
+        self.backbutton.setToolTip(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:12pt;\">Back to menu </span></p></body></html>"))
+        self.backbutton.setText(_translate("Dialog", "Back To Menu"))

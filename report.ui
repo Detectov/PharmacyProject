@@ -19,7 +19,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>220</x>
      <y>40</y>
      <width>161</width>
      <height>61</height>
@@ -29,15 +29,15 @@
     <string notr="true">color: rgb(255, 255, 255);font-size:28pt;</string>
    </property>
    <property name="text">
-    <string>Reports</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Reports&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="prodbutton">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>170</x>
      <y>120</y>
-     <width>171</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
@@ -52,9 +52,9 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="salesbutton">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>170</x>
      <y>200</y>
-     <width>171</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
@@ -69,9 +69,9 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="salesmenubutton">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>170</x>
      <y>280</y>
-     <width>171</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
@@ -86,9 +86,9 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="labbutton">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>170</x>
      <y>360</y>
-     <width>171</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
@@ -103,11 +103,14 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>430</y>
-     <width>93</width>
-     <height>28</height>
+     <x>462</x>
+     <y>417</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Back to menu &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(156, 208, 93);

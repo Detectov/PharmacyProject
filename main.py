@@ -3,6 +3,8 @@ from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 from datetime import date
+from PyQt5.QtWidgets import QMainWindow
+
 
 products = []
 sales = []
@@ -13,6 +15,8 @@ class Login(QDialog):
         super(Login,self).__init__()
         loadUi("login.ui",self)
         
+        
+
         self.createbutton.clicked.connect(self.signup)
         self.loginbutton.clicked.connect(self.login)
         
@@ -31,6 +35,7 @@ class Login(QDialog):
                     widget.setCurrentIndex(widget.currentIndex()+1)
                     return
         QtWidgets.QMessageBox.warning(self, 'Login failed', 'Username or password not valid')
+        
     def signup(self):
         username = self.username_input.text()
         password = self.password_input.text()
@@ -78,6 +83,8 @@ class AddProduct(QDialog):
     def __init__(self):
         super(AddProduct, self).__init__()
         loadUi("addprod.ui", self)
+        widget.setFixedWidth(620)
+        widget.setFixedHeight(480)
         self.backbutton.clicked.connect(self.backtomenu)
         self.donebutton.clicked.connect(self.backtomenu)
         self.donebutton.clicked.connect(self.savedata)
