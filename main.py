@@ -15,8 +15,6 @@ class Login(QDialog):
         super(Login,self).__init__()
         loadUi("login.ui",self)
         
-        
-
         self.createbutton.clicked.connect(self.signup)
         self.loginbutton.clicked.connect(self.login)
         
@@ -169,6 +167,8 @@ class Reports(QDialog):
         self.backbutton.clicked.connect(self.backtomenu)
         self.salesmenubutton.clicked.connect(self.gotosalesmenu)
         self.labbutton.clicked.connect(self.gotolab)
+        self.billbutton.clicked.connect(self.gotobillmenu)
+        
         
     def backtomenu(self):
         menu=Menu()
@@ -193,6 +193,11 @@ class Reports(QDialog):
     def gotolab(self):
         lab= viewProd()
         widget.addWidget(lab)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def gotobillmenu(self):
+        Billme= Billmenu()
+        widget.addWidget(Billme)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
 class ProdTable(QDialog):
@@ -334,10 +339,10 @@ class SalesByCard(QDialog):
         salesmenu=SalesMenu()
         widget.addWidget(salesmenu)
         widget.setCurrentIndex(widget.currentIndex()+1)
-
+        
 class SalesByCash(QDialog):
-    def __init__(self):
-        super(SalesByCash, self).__init__()
+    def _init_(self):
+        super(SalesByCash, self)._init_()
         loadUi("salesbycash.ui",self)
         self.tableWidget.setColumnWidth(0,250)
         self.tableWidget.setColumnWidth(1,250)
@@ -370,6 +375,106 @@ class SalesByCash(QDialog):
         salesmenu = SalesMenu()
         widget.addWidget(salesmenu)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+class Billmenu(QDialog):
+    def __init__(self):
+        super(Billmenu, self).__init__()
+        loadUi("billmenu.ui", self)
+        self.yesbill.clicked.connect(self.yesbills)
+        self.nobill.clicked.connect(self.nobills)
+        self.backbutt.clicked.connect(self.backbutton )
+
+    def yesbills(self):
+        bill = BILLED()
+        widget.addWidget(bill)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def nobills(self):
+        notbill=NOTBILLED()
+        widget.addWidget(notbill)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def backbutton(self):
+        report=Reports()
+        widget.addWidget(report)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+
+    
+class BILLED(QDialog):
+    def __init__(self):
+        super(BILLED, self).__init__()
+        loadUi("yesbilltable.ui", self)
+        self.tableWidget.setColumnWidth(0,250)
+        self.tableWidget.setColumnWidth(1,250)
+        self.tableWidget.setColumnWidth(2,250)
+        self.tableWidget.setColumnWidth(3,250)
+        self.tableWidget.setColumnWidth(4,250)
+        self.tableWidget.setColumnWidth(5,250)
+        self.tableWidget.setColumnWidth(6,250)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.backbutton.clicked.connect(self.backtoreport)
+        self.loaddata()
+
+    def loaddata(self):
+        row = 0
+        for i in sales:
+            if i["billed"] == "Y":
+                self.tableWidget.setRowCount(len(sales))
+                self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
+                self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
+                self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(i["amount"])))
+                self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(str(i["subtotal"])))
+                self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(i["total"])))
+                self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(i["method"]))
+                self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(i["billed"]))
+                row += 1
+            
+    
+    def backtoreport(self):
+        rep=Reports()
+        widget.addWidget(rep)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+class NOTBILLED(QDialog):
+    def __init__(self):
+        super(NOTBILLED, self).__init__()
+        loadUi("notbilltable.ui", self)
+        self.tableWidget.setColumnWidth(0,250)
+        self.tableWidget.setColumnWidth(1,250)
+        self.tableWidget.setColumnWidth(2,250)
+        self.tableWidget.setColumnWidth(3,250)
+        self.tableWidget.setColumnWidth(4,250)
+        self.tableWidget.setColumnWidth(5,250)
+        self.tableWidget.setColumnWidth(6,250)
+        widget.setFixedWidth(1067)
+        widget.setFixedHeight(735)
+        self.backbutton.clicked.connect(self.backtoreports)
+        self.loaddata()
+
+    def loaddata(self):
+        row = 0
+        for i in sales:
+            if i["billed"] == "N":
+                self.tableWidget.setRowCount(len(sales))
+                self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(str(i["date"])))
+                self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(i["soldprod"]))
+                self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(i["amount"])))
+                self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(str(i["subtotal"])))
+                self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(str(i["total"])))
+                self.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(i["method"]))
+                self.tableWidget.setItem(row, 6, QtWidgets.QTableWidgetItem(i["billed"]))
+                row += 1
+            
+    
+    def backtoreports(self):
+        rep=Reports()
+        widget.addWidget(rep)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    
+            
 
 class viewProd(QDialog):
     def __init__(self):

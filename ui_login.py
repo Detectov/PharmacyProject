@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(900, 900)
+        Dialog.resize(620, 480)
         Dialog.setSizeIncrement(QtCore.QSize(50, 50))
         Dialog.setCursor(QtGui.QCursor(QtCore.Qt.CrossCursor))
         Dialog.setStyleSheet("background-color: rgb(54, 54, 54);\n"
@@ -60,7 +60,7 @@ class Ui_Dialog(object):
 "font: 14pt \"MS Shell Dlg 2\";")
         self.createbutton.setObjectName("createbutton")
         self.label_5 = QtWidgets.QLabel(Dialog)
-        self.label_5.setGeometry(QtCore.QRect(130, 70, 421, 61))
+        self.label_5.setGeometry(QtCore.QRect(130, 70, 441, 61))
         self.label_5.setStyleSheet("font: 75 20pt \"MS Shell Dlg 2\";\n"
 "color: rgb(255, 255, 255);")
         self.label_5.setObjectName("label_5")

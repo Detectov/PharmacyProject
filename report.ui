@@ -38,7 +38,7 @@
      <x>170</x>
      <y>120</y>
      <width>261</width>
-     <height>61</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -53,9 +53,9 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>200</y>
+     <y>180</y>
      <width>261</width>
-     <height>61</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -70,9 +70,9 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>280</y>
+     <y>240</y>
      <width>261</width>
-     <height>61</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -87,9 +87,9 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>360</y>
+     <y>300</y>
      <width>261</width>
-     <height>61</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -118,6 +118,23 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Back To Menu</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="billbutton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>360</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 208, 93);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>VIEW SALES BY BILLING </string>
    </property>
   </widget>
  </widget>

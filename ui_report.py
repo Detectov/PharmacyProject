@@ -21,22 +21,22 @@ class Ui_Dialog(object):
         self.label.setStyleSheet("color: rgb(255, 255, 255);font-size:28pt;")
         self.label.setObjectName("label")
         self.prodbutton = QtWidgets.QPushButton(Dialog)
-        self.prodbutton.setGeometry(QtCore.QRect(170, 120, 261, 61))
+        self.prodbutton.setGeometry(QtCore.QRect(170, 120, 261, 41))
         self.prodbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
 "color: rgb(255, 255, 255);")
         self.prodbutton.setObjectName("prodbutton")
         self.salesbutton = QtWidgets.QPushButton(Dialog)
-        self.salesbutton.setGeometry(QtCore.QRect(170, 200, 261, 61))
+        self.salesbutton.setGeometry(QtCore.QRect(170, 180, 261, 41))
         self.salesbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
 "color: rgb(255, 255, 255);")
         self.salesbutton.setObjectName("salesbutton")
         self.salesmenubutton = QtWidgets.QPushButton(Dialog)
-        self.salesmenubutton.setGeometry(QtCore.QRect(170, 280, 261, 61))
+        self.salesmenubutton.setGeometry(QtCore.QRect(170, 240, 261, 41))
         self.salesmenubutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
 "color: rgb(255, 255, 255);")
         self.salesmenubutton.setObjectName("salesmenubutton")
         self.labbutton = QtWidgets.QPushButton(Dialog)
-        self.labbutton.setGeometry(QtCore.QRect(170, 360, 261, 61))
+        self.labbutton.setGeometry(QtCore.QRect(170, 300, 261, 41))
         self.labbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
 "color: rgb(255, 255, 255);")
         self.labbutton.setObjectName("labbutton")
@@ -45,6 +45,11 @@ class Ui_Dialog(object):
         self.backbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
 "color: rgb(255, 255, 255);")
         self.backbutton.setObjectName("backbutton")
+        self.billbutton = QtWidgets.QPushButton(Dialog)
+        self.billbutton.setGeometry(QtCore.QRect(170, 360, 261, 41))
+        self.billbutton.setStyleSheet("background-color: rgb(156, 208, 93);\n"
+"color: rgb(255, 255, 255);")
+        self.billbutton.setObjectName("billbutton")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -59,3 +64,4 @@ class Ui_Dialog(object):
         self.labbutton.setText(_translate("Dialog", "VIEW PRODUCTS BY LAB"))
         self.backbutton.setToolTip(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:12pt;\">Back to menu </span></p></body></html>"))
         self.backbutton.setText(_translate("Dialog", "Back To Menu"))
+        self.billbutton.setText(_translate("Dialog", "VIEW SALES BY BILLING "))
