@@ -33,7 +33,7 @@
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>BILL</string>
+    <string>BILLED</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">

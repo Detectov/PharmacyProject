@@ -56,7 +56,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "BILL"))
+        self.label.setText(_translate("Dialog", "BILLED"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "OrderNum"))
         item = self.tableWidget.horizontalHeaderItem(1)
